@@ -15,5 +15,5 @@ $load = function($dir = lib."/*") use (&$load) {
     if(strtolower(pathinfo($content)["extension"]) == "php") 
       include $content;
   }
-}
+};
 $load();
