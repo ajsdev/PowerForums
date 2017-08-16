@@ -6,10 +6,10 @@ $enum = [
 
 foreach($enum as $k => $v) define($k, $v);
 
-$load = function($dir = lib."/*") use (&$load) {
+$load = function($dir = lib."\*") use (&$load) {
   foreach(glob($dir) as $content){
     if(is_dir($content)) {
-      $load($content."/*");
+      $load($content."\*");
       continue;
     }
     if(strtolower(pathinfo($content)["extension"]) == "php") 
